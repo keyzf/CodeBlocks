@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>GopherX beta</title>
+
+	<!-- Le styles -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+
+
+	<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.1.custom.js"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/gridBuilder.js"></script>
+
+    <script src="js/jquery.ui.position.js" type="text/javascript"></script>
+    <script src="js/jquery.contextMenu.js" type="text/javascript"></script>
+	<script src="js/jquery.ba-dotimeout.js" type="text/javascript"></script>
+
+	<script src="js/jquery.ui.combobox.js"></script>
+
+	<script src="js/keyboard.js" type="text/javascript"></script>
+
+	<script src="ace/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+	<link href="css/index.css" rel="stylesheet">
+
+    <script src="js/main.js" type="text/javascript"></script>
+
+    <link href="css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+
+	<script>
+	</script>
+
+</head>
+<body>
+	<div id="header">
+		<div id="branding">
+			<p id="name"><a title="jsFiddle (alpha)" href="#" id="home">projectJS <span>β</span></a></p>
+		</div>
+		<div id="actions">
+			<ul>
+				<li class="actionItem">
+					<div class="aiButton" id="apply_btn" title="Apply (CTRL + Return)">Apply</div>
+				</li>
+				<li class="actionItem">
+					<div class="aiButton" id="savenew" title="Save new ProjectX (CTRL + S)">Save</div>
+				</li>
+				<li class="actionItem">
+					<div class="aiButton" id="showall_btn" title="Show all elements">Show All</div>
+				</li>
+				<li class="actionItem">
+					<div class="aiButton" id="globalhead_btn" title="Head Editor">Common Head</div>
+				</li>
+				<li class="actionItem">
+					<div class="aiButton" id="globaledit_btn" title="Global CSS Editor">Common CSS</div>
+				</li>
+				<li class="actionItem">
+					<div class="aiButton" id="libraries_btn" title="Loaded Libraries">Libraries</div>
+				</li>
+
+				<li class="actionItem" style="margin-left:10px;">
+					<select style="width:250px" id="all_form_elements">
+						<option value="">-Scene Elements-</option>
+					</select>
+				</li>
+
+				<li class="actionItem" style="padding-left:15px">
+					<div class="aiButton" id="edit_element_btn" title="Element Properties">Edit</div>
+				</li>
+
+				<li class="actionItem">
+					<div class="aiButton" id="element_popup_btn" title="Element Properties">Properties</div>
+				</li>
+
+			</ul>
+			<ul class="actionCont right">
+				<li class="actionItem noIcon"><div class="aiButton" id="login" title="Login" href="/user/login/">Login/Sign up</div></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="htmleditor_div" class="component-window" style="height:300px;" >
+		<div id="htmleditor" style="width:278px; height:300px;"></div>
+		<div id="htmleditor_div_hint" class="EditorHint">HTML</div>
+	</div>
+
+	<div id="csseditor_div" class="component-window" style="height:300px;" >
+		<div id="csseditor" style="width:278px; height:300px;"></div>
+		<div id="csseditor_div_hint" class="EditorHint">CSS</div>
+	</div>
+
+	<div id="jseditor_div" class="component-window" style="height:300px;" >
+		<div id="jseditor" style="width:278px; height:300px;"></div>
+		<div id="jseditor_div_hint"class="EditorHint">JavaScript</div>
+	</div>
+
+
+	<div id="editor_div" class="editor-window">
+		<iframe id="designspace_frame" style="border: 1px solid #888888; width:880px; height:600px; overflow:scroll; position:absolute;"></iframe>
+	</div>
+
+<div id="globaldialog" title="Edit Global CSS">
+  <div id="globalcsseditor" style="width:800px; height:600px;"></div>
+		<div id="globalcsseditor_div_hint" class="EditorHint">Global CSS</div>
+</div>
+
+<div id="globalheaddialog" title="Edit Head">
+  <div id="globalheadeditor" style="width:800px; height:600px;"></div>
+		<div id="globalheadeditor_div_hint" class="EditorHint">Head</div>
+</div>
+
+<div id="libraries_div" class="libraryContainer"></div>
+
+<div id="codeblocks_div" class="CodeBlocksContainer"></div>
+
+
+</body>
+</html>
+
+

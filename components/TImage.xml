@@ -1,0 +1,12 @@
+<component>
+	<name>Image</name>
+	<description>Can be a static image, also can be updated programmatically.</description>
+	<formID>TImage</formID>
+	<icon>components/ImageIcon.png</icon>
+	<width>80</width>
+	<height>40</height>
+	<style>TImageBaseClass</style>
+	<cssfile>TImage.css</cssfile>
+	<jsfile>TImage.js</jsfile>
+	<code><![CDATA[<center>Red Label<br>]]></code>
+</component>

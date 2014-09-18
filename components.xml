@@ -1,0 +1,6 @@
+<components>
+    <component>components/TBox.xml</component>
+    <component>components/TLabel.xml</component>
+    <component>components/TArrow.xml</component>
+    <component>components/TImage.xml</component>
+</components>

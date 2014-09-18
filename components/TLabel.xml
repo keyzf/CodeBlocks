@@ -1,0 +1,12 @@
+<component>
+	<name>Label</name>
+	<description>Outputs text, can be both content and style can be changed during runtime.</description>
+	<formID>TLabel</formID>
+	<icon>components/PageIcon.png</icon>
+	<width>80</width>
+	<height>40</height>
+	<style>TLabelBaseClass</style>
+	<cssfile>TLabel.css</cssfile>
+	<jsfile>TLabel.js</jsfile>
+	<code><![CDATA[<center>Red Label<br>]]></code>
+</component>

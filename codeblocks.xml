@@ -1,0 +1,335 @@
+<libraries>
+	<group name="Forms">
+		<item id="Button" image="components/ButtonIcon.png" name="Button" CSSWidth="160" CSSHeight="120">
+			<ItemDescription>The most common clickable event there is.</ItemDescription>
+			<CSSCodeStyleNames><![CDATA[innerbox_A,innerbox_A_center_tool]]></CSSCodeStyleNames>
+			<GlobalHeadCode><![CDATA[<!-- Test Code -->]]></GlobalHeadCode>
+			<GlobalCSSCode><![CDATA[
+.innerbox_A {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 5px;
+		margin: 0px;
+		border: 1px dotted #999;
+}
+
+.innerbox_A_center_tool {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+}
+]]></GlobalCSSCode>
+			<HTMLCode><![CDATA[
+<div class="innerbox_A">
+	Placeholder For<br />
+	Button
+</div><div class="innerbox_A_center_tool">&nbsp;</div>
+]]></HTMLCode>
+
+			<CSSCode><![CDATA[
+##ElementName {
+	top:#ElementToppx;
+	left:#ElementLeftpx;
+	width:#ElementWidthpx;
+	height:#ElementHeightpx;
+	z-index:#ElementZIndex;
+	position:absolute;
+	/* -webkit-transform: rotate(5deg); /* Safari and Chrome */
+	border-radius: 12.5px;
+	background: blue;
+	color: white;
+	padding: 5px;
+	text-align: center;
+    box-shadow:
+        0px 0px 2px 0px rgba(0,0,0,.5) inset,
+        0px 5px 10px 0px rgba(255,255,255,1) inset,
+        0px 6px 5px -3px rgba(0,0,0,.5),
+        0px 25px 40px -20px rgba(0,0,0,1); }
+]]></CSSCode>
+			<JSCode><![CDATA[
+$.hide();
+$.slideDown("slow");
+]]></JSCode>
+		</item>
+
+		<item id="Checkbox" image="components/checkbox_full.png" name="Check Box" CSSWidth="100" CSSHeight="100">
+			<ItemDescription>an open source modular JavaScript library designed to ease the rapid development of cross-platform, JavaScript/Ajax-based applications and web sites.</ItemDescription>
+			<CSSCodeStyleNames><![CDATA[innerbox_A,innerbox_A_center_tool]]></CSSCodeStyleNames>
+			<GlobalHeadCode></GlobalHeadCode>
+			<GlobalCSSCode><![CDATA[
+.innerbox_A {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 5px;
+		margin: 0px;
+		border: 1px dotted #999;
+}
+
+.innerbox_A_center_tool {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+}
+]]></GlobalCSSCode>
+			<HTMLCode><![CDATA[
+<div class="innerbox_A">
+	Placeholder For<br />
+	Checkbox
+</div><div class="innerbox_A_center_tool">&nbsp;</div>
+]]></HTMLCode>
+
+			<CSSCode><![CDATA[
+##ElementName {
+	top:#ElementToppx;
+	left:#ElementLeftpx;
+	width:#ElementWidthpx;
+	height:#ElementHeightpx;
+	z-index:#ElementZIndex;
+	position:absolute;
+	/* -webkit-transform: rotate(5deg); /* Safari and Chrome */
+	border-radius: 12.5px;
+	background: green;
+	color: white;
+	padding: 5px;
+	text-align: center;
+    box-shadow:
+        0px 0px 2px 0px rgba(0,0,0,.5) inset,
+        0px 5px 10px 0px rgba(255,255,255,1) inset,
+        0px 6px 5px -3px rgba(0,0,0,.5),
+        0px 25px 40px -20px rgba(0,0,0,1); }
+]]></CSSCode>
+			<JSCode><![CDATA[
+$.hide();
+$.slideDown("slow");
+]]></JSCode>
+		</item>
+
+		<item id="Dropdown" image="components/DropDownListIcon.png" name="Drop Down" CSSWidth="220" CSSHeight="100">
+			<ItemDescription>My Object-Oriented Tools is a lightweight, object-oriented, JavaScript framework. It is released under the free, open-source MIT License.</ItemDescription>
+			<CSSCodeStyleNames><![CDATA[innerbox_A,innerbox_A_center_tool]]></CSSCodeStyleNames>
+			<GlobalHeadCode></GlobalHeadCode>
+			<GlobalCSSCode><![CDATA[
+.innerbox_A {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 5px;
+		margin: 0px;
+		border: 1px dotted #999;
+}
+
+.innerbox_A_center_tool {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+}
+]]></GlobalCSSCode>
+			<HTMLCode><![CDATA[
+<div class="innerbox_A">
+	Placeholder For<br />
+	Drop Down
+</div><div class="innerbox_A_center_tool">&nbsp;</div>
+]]></HTMLCode>
+
+			<CSSCode><![CDATA[
+##ElementName {
+	top:#ElementToppx;
+	left:#ElementLeftpx;
+	width:#ElementWidthpx;
+	height:#ElementHeightpx;
+	z-index:#ElementZIndex;
+	position:absolute;
+	/* -webkit-transform: rotate(5deg); /* Safari and Chrome */
+	border-radius: 12.5px;
+	background: red;
+	color: white;
+	padding: 5px;
+	text-align: center;
+    box-shadow:
+        0px 0px 2px 0px rgba(0,0,0,.5) inset,
+        0px 5px 10px 0px rgba(255,255,255,1) inset,
+        0px 6px 5px -3px rgba(0,0,0,.5),
+        0px 25px 40px -20px rgba(0,0,0,1); }
+]]></CSSCode>
+			<JSCode><![CDATA[
+$.hide();
+$.slideDown("slow");
+]]></JSCode>
+		</item>
+
+		<item id="SimpleGrid" image="components/GridIcon.png" name="Simple Grid" CSSWidth="220" CSSHeight="150">
+			<ItemDescription>The Yahoo! User Interface Library (YUI) is an open-source JavaScript library for building richly interactive web applications using techniques such as Ajax, DHTML, and DOM scripting.</ItemDescription>
+			<CSSCodeStyleNames><![CDATA[innerbox_A,innerbox_A_center_tool]]></CSSCodeStyleNames>
+			<GlobalHeadCode></GlobalHeadCode>
+			<GlobalCSSCode><![CDATA[
+.innerbox_A {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 5px;
+		margin: 0px;
+		border: 1px dotted #999;
+}
+
+.innerbox_A_center_tool {
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+}
+]]></GlobalCSSCode>
+			<HTMLCode><![CDATA[
+<div class="innerbox_A">
+	Placeholder For<br />
+	Simple Grid
+</div><div class="innerbox_A_center_tool">&nbsp;</div>
+]]></HTMLCode>
+
+			<CSSCode><![CDATA[
+##ElementName {
+	top:#ElementToppx;
+	left:#ElementLeftpx;
+	width:#ElementWidthpx;
+	height:#ElementHeightpx;
+	z-index:#ElementZIndex;
+	position:absolute;
+	/* -webkit-transform: rotate(5deg); /* Safari and Chrome */
+	border-radius: 12.5px;
+	background: brown;
+	color: white;
+	padding: 5px;
+	text-align: center;
+    box-shadow:
+        0px 0px 2px 0px rgba(0,0,0,.5) inset,
+        0px 5px 10px 0px rgba(255,255,255,1) inset,
+        0px 6px 5px -3px rgba(0,0,0,.5),
+        0px 25px 40px -20px rgba(0,0,0,1); }
+]]></CSSCode>
+			<JSCode><![CDATA[
+$.hide();
+$.slideDown("slow");
+]]></JSCode>
+		</item>
+
+	</group>
+
+	<group name="Design Elements">
+		<item id="SimpleImage" image="components/ImageIcon.png" name="Simple Image">
+			<ItemDescription>a JavaScript library that provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="SimpleTabPanels" image="components/TabPanelIcon.png" name="Simple Tab Panels">
+			<ItemDescription>there are components comprising JavaScript code, HTML markup, and CSS style declarations that provide interactive features.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="SimpleSlidePanel" image="components/SlidePanelIcon.png" name="Simple Slide Panel">
+			<ItemDescription>a pure JavaScript application framework for building interactive web applications using techniques such as Ajax, DHTML and DOM scripting.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Google Stuff">
+		<item id="Kinetic" image="components/kineticjs.png" name="Kinetic">
+			<ItemDescription>an HTML5 Canvas JavaScript framework that extends the 2d context by enabling high performance event detection for desktop and mobile applications.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Processing" image="components/180px-Processing_Logo_Clipped.png" name="Processing">
+			<ItemDescription>a JavaScript port of Processing, a programming language designed to write visualizations, images, and interactive content.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Raphael" image="components/Raphael_logo.png" name="Raphaël">
+			<ItemDescription>a cross-browser JavaScript library that draws Vector graphics for web sites. It will use SVG for most browsers, but will use VML for older versions of Internet Explorer.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Three_js" image="components/threejs.jpg" name="Three.js">
+			<ItemDescription>Three.js is a lightweight cross-browser JavaScript library/API used to create and display animated 3D computer graphics. The scripts may be used in conjunction with the HTML5 canvas element, SVG or WebGL.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Eye Candy">
+		<item id="AngularJS" image="components/200px-AngularJS-large.png" name="AngularJS">
+			<ItemDescription>AngularJS is an open-source JavaScript framework, maintained by Google, that assists with running single-page applications. Its goal is to augment browser-based applications with model–view–controller (MVC) capability, in an effort to make both development and testing easier.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Backbone_js" image="components/BackboneJS_logo.png" name="Backbone.js">
+			<ItemDescription>Backbone is a JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm. Backbone is known for being lightweight, as its only dependency is on one JavaScript library,[2]</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Cappuccino" image="components/80px-Cappuccino-icon.png" name="Cappuccino">
+			<ItemDescription>Cappuccino is an open source application development framework for developing web applications that look and feel like desktop applications on Mac OS X.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Ember_js" image="components/Ember.js_Logo_and_Mascot.png" name="Ember.js">
+			<ItemDescription>Ember.js is an open-source client-side JavaScript web application framework based on the model-view-controller (MVC) software architectural pattern. It allows developers to create scalable single-page applications</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="JQuery UI">
+		<item id="PDF_js" image="components/pdf.jpg" name="PDF.js">
+			<ItemDescription>PDF.js or pdf.js is a JavaScript library intended to render PDF files using the HTML5 Canvas for a safer and web standards compliant web browser rendering of PDF file. </ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="SocketIO" image="components/socketio.jpg" name="Socket.IO">
+			<ItemDescription>Socket.IO is a JavaScript library for realtime web applications. It has two parts: a client-side library that runs in the browser, and a server-side library for node.js. Both components have a nearly identical API. Like node.js, it is event-driven.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Placeholders">
+		<item id="jQueryMobile" image="components/200px-Jquery-mobile-logo.png" name="jQuery Mobile">
+			<ItemDescription>jQuery Mobile is a touch-optimized web framework (additionally known as a JavaScript library or a mobile framework) currently being developed by the jQuery project team. The development focuses on creating a framework compatible with a wide variety of smartphones and tablet computers,[2]</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="TwitterBootstrap" image="components/Twitter_Boostrap_logo.png" name="Twitter Bootstrap">
+			<ItemDescription>Bootstrap is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+</libraries>

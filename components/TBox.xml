@@ -1,0 +1,12 @@
+<component>
+	<name>Box</name>
+	<description>A rectangle, can be used as a container or marker. Can have onclick event.</description>
+	<formID>TBox</formID>
+	<icon>components/ButtonIcon.png</icon>
+	<width>80</width>
+	<height>40</height>
+	<style>TBoxBaseClass</style>
+	<cssfile>TBox.css</cssfile>
+	<jsfile>TBox.js</jsfile>
+	<code><![CDATA[<center>Red Label<br>]]></code>
+</component>

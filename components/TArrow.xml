@@ -1,0 +1,12 @@
+<component>
+	<name>Arrow</name>
+	<description>Visual linking clues.</description>
+	<formID>TArrow</formID>
+	<icon>components/CheckBoxIcon.png</icon>
+	<width>80</width>
+	<height>40</height>
+	<style>TArrowBaseClass</style>
+	<cssfile>TArrow.css</cssfile>
+	<jsfile>TArrow.js</jsfile>
+	<code><![CDATA[<center>Red Label<br>]]></code>
+</component>

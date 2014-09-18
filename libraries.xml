@@ -1,0 +1,120 @@
+<libraries>
+	<group name="DOM (manipulation)">
+		<item id="jQuery" image="libraries/JQuery_logo.png" name="jQuery">
+			<ItemDescription>a multi-browser (cf. cross-browser) JavaScript library designed to simplify the client-side scripting of HTML. jQuery is free, open source software, licensed under the MIT License.</ItemDescription>
+			<ItemInclude><![CDATA[
+<script src="js/jquery-1.9.1.js"></script>
+			]]></ItemInclude>
+		</item>
+		<item id="DojoToolkit" image="libraries/200px-Dojo_toolkit_logo.png" name="Dojo Toolkit">
+			<ItemDescription>an open source modular JavaScript library designed to ease the rapid development of cross-platform, JavaScript/Ajax-based applications and web sites.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="MooTools" image="libraries/Mootools.png" name="MooTools">
+			<ItemDescription>My Object-Oriented Tools is a lightweight, object-oriented, JavaScript framework. It is released under the free, open-source MIT License.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="YUILibrary" image="libraries/Yuilib.jpg" name="YUI Library">
+			<ItemDescription>The Yahoo! User Interface Library (YUI) is an open-source JavaScript library for building richly interactive web applications using techniques such as Ajax, DHTML, and DOM scripting.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="GUI-related (Widget libraries)">
+		<item id="JQueryUI" image="libraries/220px-JQuery_UI_Logo.png" name="JQuery UI">
+			<ItemDescription>a JavaScript library that provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets.</ItemDescription>
+			<ItemInclude><![CDATA[
+<script src="js/jquery-ui-1.10.1.custom.js"></script>
+<link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+			]]></ItemInclude>
+		</item>
+		<item id="DojoWidgets" image="libraries/200px-Dojo_toolkit_logo.png" name="Dojo Widgets">
+			<ItemDescription>there are components comprising JavaScript code, HTML markup, and CSS style declarations that provide interactive features.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="ExtJS" image="libraries/extjs.png" name="Ext JS">
+			<ItemDescription>a pure JavaScript application framework for building interactive web applications using techniques such as Ajax, DHTML and DOM scripting.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Graphical/Visualization (Canvas, SVG)">
+		<item id="Kinetic" image="libraries/kineticjs.png" name="Kinetic">
+			<ItemDescription>an HTML5 Canvas JavaScript framework that extends the 2d context by enabling high performance event detection for desktop and mobile applications.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Processing" image="libraries/180px-Processing_Logo_Clipped.png" name="Processing">
+			<ItemDescription>a JavaScript port of Processing, a programming language designed to write visualizations, images, and interactive content.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Raphael" image="libraries/Raphael_logo.png" name="Raphaël">
+			<ItemDescription>a cross-browser JavaScript library that draws Vector graphics for web sites. It will use SVG for most browsers, but will use VML for older versions of Internet Explorer.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Three_js" image="libraries/threejs.jpg" name="Three.js">
+			<ItemDescription>Three.js is a lightweight cross-browser JavaScript library/API used to create and display animated 3D computer graphics. The scripts may be used in conjunction with the HTML5 canvas element, SVG or WebGL.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Web-application (MVC, MVVM)">
+		<item id="AngularJS" image="libraries/200px-AngularJS-large.png" name="AngularJS">
+			<ItemDescription>AngularJS is an open-source JavaScript framework, maintained by Google, that assists with running single-page applications. Its goal is to augment browser-based applications with model–view–controller (MVC) capability, in an effort to make both development and testing easier.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Backbone_js" image="libraries/BackboneJS_logo.png" name="Backbone.js">
+			<ItemDescription>Backbone is a JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm. Backbone is known for being lightweight, as its only dependency is on one JavaScript library,[2]</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Cappuccino" image="libraries/80px-Cappuccino-icon.png" name="Cappuccino">
+			<ItemDescription>Cappuccino is an open source application development framework for developing web applications that look and feel like desktop applications on Mac OS X.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="Ember_js" image="libraries/Ember.js_Logo_and_Mascot.png" name="Ember.js">
+			<ItemDescription>Ember.js is an open-source client-side JavaScript web application framework based on the model-view-controller (MVC) software architectural pattern. It allows developers to create scalable single-page applications</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Pure Javascript/AJAX">
+		<item id="PDF_js" image="libraries/pdf.jpg" name="PDF.js">
+			<ItemDescription>PDF.js or pdf.js is a JavaScript library intended to render PDF files using the HTML5 Canvas for a safer and web standards compliant web browser rendering of PDF file. </ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="SocketIO" image="libraries/socketio.jpg" name="Socket.IO">
+			<ItemDescription>Socket.IO is a JavaScript library for realtime web applications. It has two parts: a client-side library that runs in the browser, and a server-side library for node.js. Both components have a nearly identical API. Like node.js, it is event-driven.</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+	</group>
+
+	<group name="Template Systems">
+		<item id="jQueryMobile" image="libraries/200px-Jquery-mobile-logo.png" name="jQuery Mobile">
+			<ItemDescription>jQuery Mobile is a touch-optimized web framework (additionally known as a JavaScript library or a mobile framework) currently being developed by the jQuery project team. The development focuses on creating a framework compatible with a wide variety of smartphones and tablet computers,[2]</ItemDescription>
+			<ItemInclude><![CDATA[
+			]]></ItemInclude>
+		</item>
+		<item id="TwitterBootstrap" image="libraries/Twitter_Boostrap_logo.png" name="Twitter Bootstrap">
+			<ItemDescription>Bootstrap is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.</ItemDescription>
+			<ItemInclude><![CDATA[
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+			]]></ItemInclude>
+		</item>
+	</group>
+
+</libraries>

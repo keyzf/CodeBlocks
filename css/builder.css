@@ -1,0 +1,61 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+
+	line-height: 120%;
+    background: none repeat scroll 0 0 #F9F9F9;
+    background-color: #FFFFFF;
+    color: #5A5858;
+    font-family: Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+    font-size: 14px;
+}
+
+
+
+
+.ui-resizable-helper { border: 2px dotted #00F; }
+
+@-webkit-keyframes pulsate {
+    0% {opacity: 1.0; }
+    50% {opacity: 0.6;}
+    100% {opacity: 1.0; }
+}
+
+
+.PulsateClass
+{
+	-webkit-animation: pulsate 1.5s ease-in-out;
+	-webkit-animation-iteration-count : infinite;
+}
+
+
+.FadeOutClass
+{
+	-webkit-opacity: 0.4;
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.DragItemClass
+{
+	-webkit-opacity: 0.8;
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+}
+
+
+.control-label {
+	display: inline-block !important;
+	pasdding-top: 5px;
+	text-align: right;
+	vertical-align: baseline;
+	padding-right: 10px;
+}
