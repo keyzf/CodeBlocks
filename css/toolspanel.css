@@ -1,0 +1,187 @@
+
+.index-bg, .index-footer-back, .index-grad4, .index-grad6, .index-login-back, .index-navbg, .index-tab-back-grad, .index-tab-legend-image, .index-title-bg {
+    background: url("../sprite/images/index_x.png") repeat-x scroll 0 0 transparent;
+}
+
+.index-control_play_blue, .index-cross, .index-fs1, .index-pencil, .index-submissions, .index-tick {
+    background: url("../sprite/images/index.png") no-repeat scroll 0 0 transparent;
+}
+
+
+/* LEFT ACCORDION MENU */
+
+#tools-panel
+{
+	right: 10px;
+	top: 50px;
+	width: 300px;
+	height: 564px;
+	border: 1px solid #888;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: white;
+	z-index: 1000;
+	-webkit-box-shadow: 3px 4px 5px 3px rgba(100, 100, 100, .4);
+	box-shadow: 3px 4px 5px 3px rgba(100, 100, 100, .4);
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-bottom-left-radius: 4px;
+	-moz-border-bottom-right-radius: 4px;
+	background: -webkit-linear-gradient(#ebeff2 0%, #fff 100%);
+}
+
+.tools li:hover {
+    border: 1px solid #AAAAAA;
+}
+
+.tools li {
+    border: 1px solid transparent;
+}
+
+.tools img {
+    margin-right: 5px;
+}
+
+#tools-wrapper {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #AAAAAA;
+    width: 300px;
+}
+
+
+#accordion {
+  display: inline-block;
+  width: 300px;
+}
+
+#tools-wrapper {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #AAAAAA;
+    width: 300px;
+}
+
+
+#accordion {
+  display: inline-block;
+  width: 300px;
+}
+
+.index-grad6 {
+    background-position: 0 -1130px;
+    height: 33px;
+}
+
+.panel-bar img {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.panel-bar span {
+  margin-left: 5px;
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+
+
+
+.ui-accordion .ui-accordion-content {
+    border-top: 0 none;
+    margin-bottom: 2px;
+    margin-top: -2px;
+
+    padding: 0px;
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+.panel-content {
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+    height: 0;
+    
+    position: relative;
+}
+
+.panel-content-open {
+    border-bottom: 1px solid #999999;
+}
+
+.panel-content-inner {
+  background: none repeat scroll 0 0 #F5F5F5;
+  padding: 5px;
+}
+
+
+
+.panel-bar {
+    border-bottom: 1px solid #999999;
+    color: #333333;
+    cursor: default;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 33px;
+    padding: 0 8px;
+    text-shadow: 0 1px 0 #FFFFFF, 0 0 10px rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/* drags class */
+.drags {
+    height: 16px;
+	z-index:10000;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 11px;
+    text-align: left;
+
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin: 1px 5px 0 0;
+    outline: medium none !important;
+    
+    cursor: move;
+	padding: 3px;
+    text-align: left;
+}
+
+.info {
+    display: inline;
+}
+
+.drags:hover {
+    background: url("../images/drag-back.png") repeat scroll 0 0 transparent;
+    box-shadow: 1px 1px 3px #999999;
+}
+
+
+/* my todo lists class */
+.my-todo-lists-li {
+    line-height: 18px;
+	z-index:10000;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 11px;
+
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin: 1px 0px 0 0;
+    outline: medium none !important;
+
+	cursor: pointer;   
+    padding: 3px;
+}
+
+.my-todo-lists-li:hover {
+    background: url("../images/drag-back.png") repeat scroll 0 0 transparent;
+    box-shadow: 1px 1px 3px #999999;
+}
+
+.my-todo-lists-class {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

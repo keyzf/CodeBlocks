@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="en-us">
+<title>Jumzu - Todo list expert</title>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.1.custom.js"></script>
+
+
+<link type="text/css" href="toolbarbuttons.css" rel="stylesheet" />
+
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+
+</head>
+
+<body>
+
+
+<style>
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+
+ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+
+li {
+    list-style: none outside none;
+}
+
+.index-bg, .index-footer-back, .index-grad4, .index-grad6, .index-login-back, .index-navbg, .index-tab-back-grad, .index-tab-legend-image, .index-title-bg {
+    background: url("sprite/images/index_x.png") repeat-x scroll 0 0 transparent;
+}
+
+.index-control_play_blue, .index-cross, .index-fs1, .index-pencil, .index-submissions, .index-tick {
+    background: url("sprite/images/index.png") no-repeat scroll 0 0 transparent;
+}
+
+
+/* LEFT ACCORDION MENU */
+
+.tools li:hover {
+    border: 1px solid #AAAAAA;
+}
+
+.tools li {
+    border: 1px solid transparent;
+}
+
+.tools img {
+    margin-right: 5px;
+}
+
+#tools-wrapper {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #AAAAAA;
+    width: 200px;
+}
+
+
+#accordion {
+  display: inline-block;
+  width: 200px;
+}
+
+#tools-wrapper {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #AAAAAA;
+    width: 200px;
+}
+
+
+#accordion {
+  display: inline-block;
+  width: 200px;
+}
+
+.index-grad6 {
+    background-position: 0 -1130px;
+    height: 33px;
+}
+
+.panel-bar img {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.panel-bar span {
+  margin-left: 5px;
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+
+
+
+.ui-accordion .ui-accordion-content {
+    border-top: 0 none;
+    margin-bottom: 2px;
+    margin-top: -2px;
+
+    padding: 0px;
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+.panel-content {
+  font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+    height: 0;
+    
+    position: relative;
+}
+
+.panel-content-open {
+    border-bottom: 1px solid #999999;
+}
+
+.panel-content-inner {
+  background: none repeat scroll 0 0 #F5F5F5;
+  padding: 5px;
+}
+
+
+
+.panel-bar {
+    border-bottom: 1px solid #999999;
+    color: #333333;
+    cursor: default;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 33px;
+    padding: 0 8px;
+    text-shadow: 0 1px 0 #FFFFFF, 0 0 10px rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/* drags class */
+.drags {
+    height: 16px;
+	z-index:10000;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 11px;
+    text-align: left;
+
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin: 1px 5px 0 0;
+    outline: medium none !important;
+    
+    cursor: move;
+	padding: 3px;
+    text-align: left;
+}
+
+.info {
+    display: inline;
+}
+
+.drags:hover {
+    background: url("images/drag-back.png") repeat scroll 0 0 transparent;
+    box-shadow: 1px 1px 3px #999999;
+}
+
+
+/* my todo lists class */
+.my-todo-lists-li {
+    line-height: 18px;
+	z-index:10000;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 11px;
+
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    margin: 1px 0px 0 0;
+    outline: medium none !important;
+
+	cursor: pointer;   
+    padding: 3px;
+}
+
+.my-todo-lists-li:hover {
+    background: url("images/drag-back.png") repeat scroll 0 0 transparent;
+    box-shadow: 1px 1px 3px #999999;
+}
+
+.my-todo-lists-class {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
+
+</style>
+
+
+<script>
+
+var LeftMenuInAnimation = false;
+var LastOpenMenu = "";
+
+
+$(document).ready(function(){ 
+
+	$(".panel-bar").click( function () {
+		if (!LeftMenuInAnimation)
+		{
+			if (LastOpenMenu!="") { LeftMenuInAnimation=true;  $(LastOpenMenu).next().hide({animation:'slideUp',duration:500,easing:"swing",queue: false , complete:function(){ LeftMenuInAnimation = false; } } ); }
+
+			if ( $(this).next().is(":visible") ) { LeftMenuInAnimation=true; LastOpenMenu=""; $(this).next().hide({animation:'slideUp',duration:500,easing:"swing",queue: false, complete:function(){  LeftMenuInAnimation = false; } } );  } else
+												 { LeftMenuInAnimation=true; LastOpenMenu=this; $(this).next().show({animation:'slideDown',duration:500,easing:"swing",queue: false, complete:function() { LeftMenuInAnimation = false; } } );  }
+		}
+	});
+
+
+
+	//------------------------------------------ ON READY INITS
+	$("#acordion_menu_1_child").hide();
+	//$("#acordion_menu_2_child").hide();
+	LastOpenMenu = $("#acordion_menu_2").children("div");
+
+});
+</script>
+
+
+	<div id="right-panel" style="width:200px; padding-right:0px">
+		<div id="tools-wrapper" style="top: 0px;">
+
+			<div id="acordion_menu_1">
+				<div class="panel-bar index-grad6" style="-moz-user-select: none; cursor: pointer;">
+				<img align="left" class="controls-tool_box" src="images/blank.gif" alt=""><span class="panel-bar-span">List Tools</span>
+				</div>
+
+				<div id="acordion_menu_1_child" >
+					<div style="height: 220px; top: 0px; left: 0px; width: 200px; background: none repeat scroll 0% 0% rgb(245, 245, 245);" class="panel-content panel-content-open">
+						<div class="panel-content-inner">
+						<ul class="tools" id="toolbox" style="margin-top:0px">
+							<li id="controls-checkbox" class="drags">
+							<div><img align="left" class="controls-checkbox" src="images/blank.gif" alt=""><span>To Do Item</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_image" class="drags">
+							<div><img align="left" class="controls-image" src="images/blank.gif" alt=""><span>Image</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_datetime" class="drags">
+							<div><img align="left" class="controls-datetime" src="images/blank.gif" alt=""><span>DateTime</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_text" class="drags">
+							<div><img align="left" class="controls-text" src="images/blank.gif" alt=""><span>Free Text</span> (HTML)<img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_fileupload" class="drags">
+							<div><img align="left" class="controls-upload" src="images/blank.gif" alt=""><span>File Upload</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_button" class="drags">
+							<div><img align="left" class="controls-button" src="images/blank.gif" alt=""><span>Tags</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="controls-survey_tools" class="drags">
+							<div><img align="left" class="controls-survey_tools" src="images/blank.gif" alt=""><span>Color</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="controls-slider" class="drags">
+							<div><img align="left" class="controls-slider" src="images/blank.gif" alt=""><span>Precentage</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="acordion_menu_2">
+				<div class="panel-bar index-grad6" style="-moz-user-select: none; cursor: pointer;">
+				<img align="left" class="controls-quick_tools" src="images/blank.gif" alt=""><span class="panel-bar-span">My Lists</span>
+				</div>
+
+				
+				<div id="acordion_menu_2_child" >
+					<div class="panel-content" style="height: 400px; top: 0px; left: 0px; width: 200px; overflow:auto; background: none repeat scroll 0% 0% rgb(245, 245, 245); ">
+						<div class="panel-content-inner">
+						<ul class="tools" id="user-todo-lists" style="">
+							<li id="control_fileupload" class="drags">
+							<div><img align="left" class="controls-upload" src="images/blank.gif" alt=""><span>File Upload</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="control_button" class="drags">
+							<div><img align="left" class="controls-button" src="images/blank.gif" alt=""><span>Tags</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="controls-survey_tools" class="drags">
+							<div><img align="left" class="controls-survey_tools" src="images/blank.gif" alt=""><span>Color</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+							<li id="controls-slider" class="drags">
+							<div><img align="left" class="controls-slider" src="images/blank.gif" alt=""><span>Precentage</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div> 
+

@@ -81,7 +81,10 @@ var ElementJSCursor = [];
 
 var codehasChanged = false;
 
+var LeftMenuInAnimation = false;
+var LastOpenMenu = "";
 
+	
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
 // code links
@@ -279,7 +282,9 @@ function resizeControls()
 	$("#editor_div").css({"top": ( menuYoffset+10)+"px", "left":(10+ $("#htmleditor_div").outerWidth() +10)+"px", "height": ((editorsHeight*3)-12+10+10)+"px", "width": (windowWidth - (editorsWidth+12+10+10+10+310) ) + "px"  });
 	$("#designspace_frame").css({"height": ( (editorsHeight*3) + 10 - 5)+"px", "width": (windowWidth - (editorsWidth+12+10+10+10+310) ) + "px"  });
 
-	$("#codeblocks_div").css({"top": (menuYoffset+10)+"px","height":((editorsHeight*3)+8+10)+"px"});
+	//$("#codeblocks_div").css({"top": (menuYoffset+10)+"px","height":((editorsHeight*3)+8+10)+"px"});
+	
+	$("#tools-panel").css({"top": (menuYoffset+10)+"px","height":((editorsHeight*3)+8+10)+"px", "right" : "10px"});
 	
 	ace.edit("htmleditor").resize();
 	ace.edit("csseditor").resize();
@@ -376,15 +381,58 @@ function SaveCodeBlocksXML(xml)
 	CodeBlocksXML = xml;
 
 	$(xml).find("group").each(function() {
-		$("#codeblocks_div").append('<div id="" class="CodeBlocksItemHeader">'+$(this).attr("name")+'</div>');
-
+//		$("#codeblocks_div").append('<div id="" class="CodeBlocksItemHeader">'+$(this).attr("name")+'</div>');
+		
+		
+		var TempDivStr = '<div id="acordion_menu_'+$(this).attr("id")+'">\n\
+		  <div class="panel-bar index-grad6" style="-moz-user-select: none; cursor: pointer;">\n\
+				<img align="left" class="controls-tool_box" src="images/blank.gif" alt=""><span class="panel-bar-span">'+$(this).attr("name")+'</span>\n\
+				</div><div id="acordion_menu_'+$(this).attr("id")+'_child" >\n\
+		  <div style="height: 220px; top: 0px; left: 0px; width: 300px; background: none repeat scroll 0% 0% rgb(245, 245, 245);" class="panel-content panel-content-open">\n\
+						<div class="panel-content-inner">\n\
+						<ul class="tools" id="toolbox" style="margin-top:0px">\n';
+		
 		$(this).find("item").each(function() {
-			$("#codeblocks_div").append('<div class="CodeBlocksItem"><div id="codeblock_'+$(this).attr("id")+'" class="CodeBlocksicon"><div class="CodeBlocksshine"><img class="MenuImage" src="'+$(this).attr("image")+'" ></div></div>\n\
-			<b>'+$(this).attr("name")+'</b> - '+$(this).find("ItemDescription").text()+'</div>');
+//			TempDivStr += '<div><img id="codeblock_'+$(this).attr("id")+'" class="MenuImage" src="'+$(this).attr("image")+'" ></div><b>'+$(this).attr("name")+'</b></div>';
+			
+			TempDivStr += '<li id="codeblock_'+$(this).attr("id")+'" class="MenuImage drags">\n\
+							<div><img align="left" class="controls-button" src="images/blank.gif" alt=""><span>'+$(this).attr("name")+'</span><img align="right" title="" alt="" src="images/blank.gif" class="info  toolbar-info_grey" style="display: none;"></div>\n\
+							</li>\n';
 		});
+		TempDivStr += '</ul>\n\
+						</div>\n\
+					</div>\n\
+				</div>\n\
+			</div>\n';
+		
+		$("#tools-wrapper").append(TempDivStr);
+		$('#acordion_menu_'+$(this).attr("id")+'_child').hide();
 	});
+	
+	$(".panel-bar").click( function () {
 
-	$( ".CodeBlocksItem .CodeBlocksicon" ).draggable({
+		if (!LeftMenuInAnimation)
+		{
+			if (LastOpenMenu!="") { 
+				LeftMenuInAnimation=true;  
+				$(LastOpenMenu).next().hide({animation:'slideUp',duration:500,easing:"swing",queue: false , complete:function(){ LeftMenuInAnimation = false; } } ); 
+			}
+
+			if ( $(this).next().is(":visible") ) { 
+				LeftMenuInAnimation=true; 
+				LastOpenMenu=""; 
+				$(this).next().hide({animation:'slideUp',duration:500,easing:"swing",queue: false, complete:function(){  LeftMenuInAnimation = false; } } );  
+			} else
+			{ 
+				LeftMenuInAnimation=true; 
+				LastOpenMenu=this;
+				$(this).next().show({animation:'slideDown',duration:500,easing:"swing",queue: false, complete:function() { LeftMenuInAnimation = false; } } );  
+			}
+		}
+	});
+	
+
+	$( ".MenuImage" ).draggable({
 		grid: [ 5,5 ],
 		helper:'clone',
 		iframeFix: true,
@@ -396,7 +444,7 @@ function SaveCodeBlocksXML(xml)
 		revert: 'invalid'
 	});
 
-	$( ".CodeBlocksItem" ).bind('click',function() {
+	$( ".MenuImage" ).bind('click',function() {
 		event.stopPropagation();
 		return false;
 	});
@@ -696,6 +744,13 @@ $(document).ready(function() {
 		});
 	});
 
+
+	
+	
+	//------------------------------------------ ON READY INITS
+	$("#acordion_menu_1_child").hide();
+	//$("#acordion_menu_2_child").hide();
+	LastOpenMenu = $("#acordion_menu_2").children("div");
 
 
 	resizeControls();

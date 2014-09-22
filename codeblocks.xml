@@ -1,5 +1,5 @@
 <libraries>
-	<group name="Forms">
+	<group name="Forms" id="forms">
 		<item id="Button" image="components/ButtonIcon.png" name="Button" CSSWidth="160" CSSHeight="120">
 			<ItemDescription>The most common clickable event there is.</ItemDescription>
 			<CSSCodeStyleNames><![CDATA[innerbox_A,innerbox_A_center_tool]]></CSSCodeStyleNames>
@@ -242,7 +242,7 @@ $.slideDown("slow");
 
 	</group>
 
-	<group name="Design Elements">
+	<group name="Design Elements"  id="design">
 		<item id="SimpleImage" image="components/ImageIcon.png" name="Simple Image">
 			<ItemDescription>a JavaScript library that provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets.</ItemDescription>
 			<ItemInclude><![CDATA[
@@ -260,7 +260,7 @@ $.slideDown("slow");
 		</item>
 	</group>
 
-	<group name="Google Stuff">
+	<group name="Google Stuff"  id="google">
 		<item id="Kinetic" image="components/kineticjs.png" name="Kinetic">
 			<ItemDescription>an HTML5 Canvas JavaScript framework that extends the 2d context by enabling high performance event detection for desktop and mobile applications.</ItemDescription>
 			<ItemInclude><![CDATA[
@@ -283,7 +283,7 @@ $.slideDown("slow");
 		</item>
 	</group>
 
-	<group name="Eye Candy">
+	<group name="Eye Candy"  id="eyecandy">
 		<item id="AngularJS" image="components/200px-AngularJS-large.png" name="AngularJS">
 			<ItemDescription>AngularJS is an open-source JavaScript framework, maintained by Google, that assists with running single-page applications. Its goal is to augment browser-based applications with model–view–controller (MVC) capability, in an effort to make both development and testing easier.</ItemDescription>
 			<ItemInclude><![CDATA[
@@ -306,7 +306,7 @@ $.slideDown("slow");
 		</item>
 	</group>
 
-	<group name="JQuery UI">
+	<group name="JQuery UI"  id="jqueryui">
 		<item id="PDF_js" image="components/pdf.jpg" name="PDF.js">
 			<ItemDescription>PDF.js or pdf.js is a JavaScript library intended to render PDF files using the HTML5 Canvas for a safer and web standards compliant web browser rendering of PDF file. </ItemDescription>
 			<ItemInclude><![CDATA[
@@ -319,7 +319,7 @@ $.slideDown("slow");
 		</item>
 	</group>
 
-	<group name="Placeholders">
+	<group name="Placeholders"  id="placeholders">
 		<item id="jQueryMobile" image="components/200px-Jquery-mobile-logo.png" name="jQuery Mobile">
 			<ItemDescription>jQuery Mobile is a touch-optimized web framework (additionally known as a JavaScript library or a mobile framework) currently being developed by the jQuery project team. The development focuses on creating a framework compatible with a wide variety of smartphones and tablet computers,[2]</ItemDescription>
 			<ItemInclude><![CDATA[
@@ -333,3 +333,63 @@ $.slideDown("slow");
 	</group>
 
 </libraries>
+
+<!--
+Standart
+============
+Menu
+Popup Menu
+Label
+Edit
+Memo
+Button
+Checkbox
+RadioButton
+ListBox
+ComboBox
+ScrollBar
+GroupBox
+RadioGroup
+Panel
+
+Aditional
+============
+BitBtn
+MaskEdit
+StringGrid
+Image
+Shape
+ScrollBox
+CheckListBox
+Splitter
+LinkLabel
+TabSet
+PageControl
+RichEdit
+ProgressBar
+TreeView
+
+System
+============
+Timer
+Resize
+
+Dialogs
+============
+FontDialog
+ColorDialog
+FindDialog
+ReplaceDialog
+DateDialog
+
+Data Access
+============
+DataSource
+
+
+Cloud
+============
+AzureConnection
+AmazonConnection
+
+-->
